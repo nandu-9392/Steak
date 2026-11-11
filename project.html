@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            
+        }
+        .back_image::after{
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(219, 187, 4, 0.856),rgba(220,40,0,0.8));
+            opacity: 1;
+            
+        }
+        .back_image img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+            opacity: 0;
+            animation: change 9s infinite;
+        }
+        .back_image img:nth-child(1) {
+            animation-delay: 3s;
+        }
+        .back_image img:nth-child(2) {
+            animation-delay: 4s;
+        }
+        .back_image img:nth-child(3) {
+            animation-delay: 6s;
+        }
+        @keyframes change {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                 opacity: 1;
+                }
+            100%{
+                opacity: 0;
+            }
+        }
+       .main>.content>h1{
+        font-size: 120px;
+        /* letter-spacing: 1px; */
+        font-family: 'Source Sans Pro', sans-serif;
+        /* font-weight: 1000; */
+        position: absolute;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        color: white;
+       }
+       .main>.content>p{
+        top: 48%;
+        font-family: 'Source Sans Pro', sans-serif;
+        letter-spacing: 2px;
+        font-style: normal;
+        /* font-size: medium; */
+        text-align: center;
+        color: white;
+        position: absolute;
+        width: 100%;
+        line-height: 30px;
+       }
+       .main>.content>.but-ton{
+        top: 65%;
+        font-family: 'Source Sans Pro', sans-serif;
+        text-align: center;
+        border: 3px solid white;
+        margin-left: 570px;
+        position: absolute;
+        color: white;
+        letter-spacing: 3px;
+        padding: 15px 35px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+       }
+       .main>.content>.but-ton:hover{
+        color: brown;
+        background-color: white;
+       }
+       .nav-main{
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 25px;
+        width: 100vw;
+        position: sticky;
+        top: 0;
+       }
+       .nav-main>.logo{
+        color: rgb(102, 97, 97);
+        font-family: 'source sans pro', Sans-serif ;
+        font-size: 30px;
+        font-weight: bold;
+        margin-left: 30px;
+        letter-spacing :2px;
+       }
+       .nav-main ul{
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        font-family: 'source sans pro', Sans-serif ;
+       }
+       .nav-main ul a{
+        text-decoration: none;
+        color: rgb(168, 160, 160);
+        font-size: 18px;
+        font-weight: normal;
+        margin-left: 22px;
+       }
+       .nav-main ul a:hover{
+        color: rgb(220, 40, 0);
+       }
+       .choose>h1{
+        text-align: center;
+        color: rgb(59, 56, 56);
+        font-family: 'Source sans pro', sans-serif;
+        font-weight: normal;
+        /* font-weight: 10px; */
+        letter-spacing: 5px;
+        font-size: 40px;
+        padding-top: 120px;
+        line-height: 55px;
+       }
+       .choose>*{
+        background-color: rgb(234, 236, 236);
+       }
+       .choose>p{
+        text-align: center;
+        color: rgb(128, 120, 120);
+        font-family: 'Source sans pro',sans-serif;
+        letter-spacing: 3px;
+        font-weight: normal;
+        /* line-height: 10px; */
+        padding-bottom: 120px;
+        font-size: 12px;
+       } 
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="back_image">
+            <img src="https://www.tooplate.com/templates/2083_steak_house/images/home-bg-slideshow3.jpg" alt="">
+            <img src="https://www.tooplate.com/templates/2083_steak_house/images/home-bg-slideshow1.jpg" alt="">
+            <img src="https://www.tooplate.com/templates/2083_steak_house/images/home-bg-slideshow2.jpg" alt="">
+        </div>
+        <div class="content">
+            <h1>Steak House</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod<br> tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
+            <div class="but-ton">
+                <p>Discover Now</p>
+            </div>
+        </div>
+    </div>
+    <nav class="nav-main">
+        <div class="logo">
+            Steak House
+        </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+    </nav>
+    <div class="choose">
+        <h1>WHY CHOOSE US?</h1>
+        <p>STEAK HOUSE HTML CSS TEMPLATE</p>
+    </div>
+</body>
+</html>
